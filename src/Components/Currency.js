@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-const BASE_URL="";
-const CONVERT_URL="";
+const BASE_URL="http://api.exchangerateapi.io/v1/latest?access_key=Vy8RKtFtSuvsBsxmndexEQ84GFbjalTJ";
+const CONVERT_URL="http://api.exchangerateapi.io/v1/convert?access_key=Vy8RKtFtSuvsBsxmndexEQ84GFbjalTJ";
 
 const Currency = () => {
 
