@@ -66,8 +66,18 @@ const Currency = () => {
                 <h2> = </h2>
 
                 <div className='to'>
+                    <input type = {'number'} placeholder = 'enter amount' value={toAmount} onChnage={(e) =>{
+                        setAmount(e.target.value)
+                        setAmountInFromCurrency(false)
+                    }} />
+                     <select value={to} onChange = {(e) => {
+                        setTo(e.target.value)
+                    }}>
+                        {currencyOptions.map(item => (
+                            <option value = {item} key = {item.Math.random()}></option>
+                        ))}
+                    </select>
                 </div> 
-
         </div>
     </div>
     </div>
