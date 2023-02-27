@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 const BASE_URL="";
-
+const CONVERT_URL="";
 
 const Currency = () => {
 
@@ -10,7 +10,6 @@ const Currency = () => {
     const [exchangeRate, setExchangeRate] = useState();
     const [amount, setAmount] = useState(1);
     const [amountInFromCurrency, setAmountInFromCurrency] = useState(true);
-
 
     let toAmount, fromAmount;
 
@@ -34,11 +33,13 @@ const Currency = () => {
             })
     }, []);
 
-
-
-
-
-
+    useEffect(() => {
+        if (from !==null && to !==null){
+            fetch(`${CONVERT_URL}&from=${from}&to=${to}&amount=${amount}`)
+                .then(res => res.json())
+                .then(data => setExchangeRate(data.rates[to]))
+        }
+    }, [from], [to]);
 
   return (
     <div className='counter-container'>
