@@ -1,3 +1,24 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  background: linear-gradient(109deg, #ddd6f3, #faaca8);
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
+.navbar-container{
+  background: transparent;
+  padding:  30px 0 10px 0;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 .App {
   text-align: center;
 }
